@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>textillate plugin for text annimation</title>
+  <!-- 1. This is the plug annimation css -->
+  <link href="assets/animate.css" rel="stylesheet">
+  <link href="assets/custom.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<!-- vid and image container STARTS -->
+  <div class="work">
+    <img class="rotate-logo" src="img/def-jams-logo.png" alt="rotating"/>
+    <video src="img/record.mov" autoplay poster="posterimage.jpg" loop>
+    </video>
+  </div>
+<!-- vid and image container ENDS -->
+
+<!-- opening comment section STARTS -->
+  <div class="blurb">
+    <h1>DEF JAM RECORDINGS BRAND GUIDELINES</h1>
+    <p>Def Jam Recordings is the definitive and pioneering label in hip-hop, helping develop the careers of legendary artists like The Beastie Boys, LL Cool J, Kanye West, and Justin Bieber. With a storied history, and an ambitious future, but no official brand guidelines, the label came to Doubleday & Cartwright looking to help define the brand for the first time in an official guidelines document distributed to employees and artists. We developed a comprehensive graphic system, iconography, and poster series in order to do so.</p>
+  </div>
+<!-- opening comment section ENDS -->
+
+
+  <!-- about font section STARTS -->
+  <div class="about-font">
+    <div>
+      <h1 class="font-heading">Font Usage & Variations</h1>
+      <h2 class="helvetica-heading">Helvetica</h2>
+      <p class="helvetica-about">We use Helvetica across our responsive website. It was chosen as we wanted it is a clear and easy font to create impact on the website without too much fuss.</p>
+    </div>
+    <div>
+      <h2 class="helvetica-light-heading">Helvetica Light</h2>
+      <p class="helvetica-light-about">Helvetica Light is the font we use as our secondary typeface for use in paragraph text and sub headings. </p>
+    </div>
+  </div>
+  <!-- about font section ENDS -->
+  <!-- scale font section STARTS -->
+  <div class="scale-font-one">
+    <h2 class="xxl">Heading - XXL</h2>
+    <h2 class="xl">Heading - XL</h2>
+    <h3 class="l">Heading - L</h3>
+    <h4 class="m">Heading - M</h4>
+    <h5 class="s">Heading - S</h5>
+    <h6 class="xs">Heading - XS</h6>
+  </div>
+  <div class="scale-font-two">
+    <h3 class="font-two">Font Two</h3>
+    <h4 class="heading-m">Heading - M</h4>
+    <h5 class="heading-s">Heading - S</h5>
+    <h6 class="heading-xs">Heading - XS</h6>
+  </div>
+  <div class="pairing-font">
+    <h2 class="pairings">Pairings</h2>
+    <p class="pairings">It is important to maintain this type pairing. This allows for clarity, consistency, and a strong hierarchy for all communications. Light weight should be paired medium weight.</p>
+    <h5>Small</h5>
+    <h1>Heading</h1>
+  </div>
+  <!-- scale font section ENDS -->
+  <!-- rules section STARTS -->
+  <div class="rules-container">
+    <h1>Def Jam Recordings</h1>
+    <div>
+      <h1>Rules</h1>
+      <div class="paragraph">
+
+        <div class="yeet">
+          <h1>Logo</h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- rules section ENDS -->
+
+<!--Logo breakdown-->
+
+<div class="row">
+  <div class="column-1">
+    <img id="logo-yellow" src="img/yellow-logo.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column-2">
+    <ul>
+      <li>Logo must be a wordmark</li>
+      <li>Record player icon must be on the right of the wordmark</li>
+      <li>Invert colors from black to white in response
+        to darker and lighter backgrounds</li>
+      <li>Logo variations are color changes such as: white, black, yellow, and a
+        solid outline border</li>
+      <li>The wordmark and icon are the prefered usage for partnerships, co-branding, and
+        in media articles</li>
+    </ul>
+  </div>
+
+<br>
+
+<div class="row-2">
+
+    <div class="column-3">
+    <p class="text">A logo is a graphic mark, emblem, symbol, or stylized name used to identify a company,
+      organization, product, or brand. It may take the form of an abstract or figurative design,
+      or it may present as a stylized version of the company's name if it has sufficient brand recognition.</p>
+    </div>
+    <div class="column-4">
+      <img class="logo" src="img/black-logo.png" alt="Snow" style="width:100%">
+    </div>
+
+</div>
+</div>
+<div>
+  <!-- 5. This is the plugin markup -->
+  <h2 class="tlt">DJ bring that beat back!</h2>
+</div>
+  <!-- plugin these were taken when I inspected the plugin website -->
+  <!-- This is jquery and we need it for most plugins -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="assets/jquery.fittext.js"></script>
+  <script src="assets/jquery.lettering.js"></script>
+  <!-- This is the plugin file, please makes sure your folders are linked to the correct parent folder -->
+  <script src="assets/jquery.textillate.js"></script>
+
+  <script>
+    // textillate is the function name
+    $(function() {
+      // This is where we call the plugin
+      $('.tlt').textillate({
+          in: {
+            // set the effect name
+            effect: 'rollIn',
+
+            // set the delay factor applied to each consecutive character
+            loop: true,
+
+            // set the delay between each character
+            delay: 15,
+
+            // set to true to animate all the characters at the same time
+            sync: false,
+
+            // randomize the character sequence
+            // (note that shuffle doesn't make sense with sync = true)
+            shuffle: false,
+
+            // reverse the character sequence
+            // (note that reverse doesn't make sense with sync = true)
+            reverse: false,
+
+            // // callback that executes once the animation has finished
+            // callback: function () {
+            //   alert('hello');
+
+          }
+        },
+
+      });
+    })
+  </script>
+
+</body>
+
+</html>
